@@ -1,6 +1,7 @@
 #!/bin/bash
 # Setup tmux symbolic links
 
+# Get script directory: http://stackoverflow.com/a/246128
 DOTFILES_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 
 TMUX_CONF_FILE="$HOME/.tmux.conf"
