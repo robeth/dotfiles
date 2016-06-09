@@ -1,8 +1,4 @@
 #!/bin/bash
-
-#Install library dependecies
-sudo apt-get install -y git xsel xclip tmux vim
-
 # Setup tmux symbolic links
 
 # Get script directory: http://stackoverflow.com/a/246128
