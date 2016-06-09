@@ -1,2 +1,6 @@
+vim/vim/bundle
+!vim/vim/bundle/Vundle.vim
+tmux/tmux/plugins
+!tmux/tmux/plugins/tpm
 *.swp
 .netrwhist
