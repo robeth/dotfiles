@@ -13,6 +13,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'wesQ3/vim-windowswap'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
