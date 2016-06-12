@@ -54,16 +54,19 @@ nnoremap <leader>l :set list!<CR>
 " Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 " Turn off current search highlight
-:nnoremap <silent> <Space> :nohlsearch<BAR>:echo<CR>
+nnoremap <silent> <Space> :nohlsearch<BAR>:echo<CR>
 " Move around windows using Meta-VimDirection
 execute "set <A-h>=\eh"
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
 execute "set <A-l>=\el"
+execute "set <A-f>=\ef"
 nmap <A-h> <C-w>h
 nmap <A-j> <C-w>j
 nmap <A-k> <C-w>k
 nmap <A-l> <C-w>l
+" Go to first window, usually NERDTree
+nmap <A-f> <C-w>t
 " <EndKeyMap>
 
 " <StartTriggers>
