@@ -14,12 +14,21 @@ Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
 
 " <StartPreferences>
-color blackboard
+syntax enable
+"let g:solarized_termcolors=256
+" color blackboard
+set background=dark
+colorscheme solarized
+
+" Minimize escape key timeout. Prevent accidental Esc key chain
+set timeoutlen=1000 ttimeoutlen=50
 
 " Wrap line, don't break word
 " Source: Vimcast episode 16 - Soft Wrap
@@ -30,7 +39,10 @@ set number norelativenumber
 set listchars=tab:▸\ ,eol:¬
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
-" Mouse: Enabled (useful for window resize
+" Highlight search matches
+set hlsearch
+
+" Mouse: Enabled (useful for window resize)
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
@@ -38,16 +50,20 @@ set ttymouse=xterm2
 
 " <StartKeyMap>
 " Toggle whitespace
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
+" Toggle NERDTree
+nnoremap <leader>t :NERDTreeToggle<CR>
+" Turn off current search highlight
+:nnoremap <silent> <Space> :nohlsearch<BAR>:echo<CR>
+" Move around windows using Meta-VimDirection
 execute "set <A-h>=\eh"
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
 execute "set <A-l>=\el"
-" Move around windows using Meta-VimDirection
-map <A-h> <C-w>h
-map <A-j> <C-w>j
-map <A-k> <C-w>k
-map <A-l> <C-w>l
+nmap <A-h> <C-w>h
+nmap <A-j> <C-w>j
+nmap <A-k> <C-w>k
+nmap <A-l> <C-w>l
 " <EndKeyMap>
 
 " <StartTriggers>
