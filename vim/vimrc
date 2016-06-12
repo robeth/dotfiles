@@ -39,11 +39,15 @@ set ttymouse=xterm2
 " <StartKeyMap>
 " Toggle whitespace
 nmap <leader>l :set list!<CR>
-" Move around windows
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+execute "set <A-h>=\eh"
+execute "set <A-j>=\ej"
+execute "set <A-k>=\ek"
+execute "set <A-l>=\el"
+" Move around windows using Meta-VimDirection
+map <A-h> <C-w>h
+map <A-j> <C-w>j
+map <A-k> <C-w>k
+map <A-l> <C-w>l
 " <EndKeyMap>
 
 " <StartTriggers>

@@ -29,3 +29,7 @@ backup $VIM_DIR
 ln -s "$DOTFILES_DIR/vim/vimrc" $VIM_CONF_FILE
 ln -s "$DOTFILES_DIR/vim/vim" $VIM_DIR
 
+# Load gnome terminal profiles
+gconftool --load "$DOTFILES_DIR/gnome/gnome-terminal-conf.xml"
+# Save gnome terminal profiles
+# gconftool --dump '/apps/gnome-terminal' > "$DOTFILES_DIR/gnome/gnome-terminal-conf.xml"
