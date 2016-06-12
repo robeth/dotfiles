@@ -66,6 +66,11 @@ nmap <A-j> <C-w>j
 nmap <A-k> <C-w>k
 nmap <A-l> <C-w>l
 " Go to first window, usually NERDTree
+" Bubble motion
+nmap <Up> ddkP
+nmap <Down> ddp
+vmap <Up> xkP`[V`]
+vmap <Down> xp`[V`]
 nmap <A-f> <C-w>t
 " <EndKeyMap>
 
