@@ -15,17 +15,23 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'mileszs/ack.vim'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
 
 " <StartPreferences>
 syntax enable
-"let g:solarized_termcolors=256
-" color blackboard
 set background=dark
-colorscheme solarized
+colorscheme blackboard
+
+" Ignore folders
+set wildignore+=*/.git/*,*/node_modules/*
+
+" Silver searcher as default
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Minimize escape key timeout. Prevent accidental Esc key chain
 set timeoutlen=1000 ttimeoutlen=50

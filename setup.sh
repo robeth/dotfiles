@@ -8,6 +8,7 @@ TMUX_CONF_FILE="$HOME/.tmux.conf"
 TMUX_DIR="$HOME/.tmux"
 VIM_CONF_FILE="$HOME/.vimrc"
 VIM_DIR="$HOME/.vim"
+ATOM_KEYMAP_FILE="$HOME/.atom/keymap.cson"
 
 function backup {
   if [ -e $1 ]
@@ -29,7 +30,6 @@ backup $VIM_DIR
 ln -s "$DOTFILES_DIR/vim/vimrc" $VIM_CONF_FILE
 ln -s "$DOTFILES_DIR/vim/vim" $VIM_DIR
 
-# Load gnome terminal profiles
-gconftool --load "$DOTFILES_DIR/gnome/gnome-terminal-conf.xml"
-# Save gnome terminal profiles
-# gconftool --dump '/apps/gnome-terminal' > "$DOTFILES_DIR/gnome/gnome-terminal-conf.xml"
+# Setup atom symbolic links
+backup $ATOM_KEYMAP_FILE
+ln -s "$DOTFILES_DIR/atom/keymap.cson" $ATOM_KEYMAP_FILE
