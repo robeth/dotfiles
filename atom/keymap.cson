@@ -34,3 +34,6 @@
   "ctrl-k J": "pane:split-down-and-move-active-item"
   "ctrl-k H": "pane:split-left-and-move-active-item"
   "\\ t": "tree-view:toggle-focus"
+
+'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
+    'f': 'jumpy:toggle'
