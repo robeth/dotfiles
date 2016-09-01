@@ -36,4 +36,7 @@
   "\\ t": "tree-view:toggle-focus"
 
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
-    'f': 'jumpy:toggle'
+  'f': 'jumpy:toggle'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'T O': 'pane:close-other-items'
