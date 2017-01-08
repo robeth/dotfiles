@@ -16,6 +16,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
