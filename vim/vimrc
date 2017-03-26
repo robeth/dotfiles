@@ -17,6 +17,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'arcticicestudio/nord-vim'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
@@ -24,7 +25,7 @@ filetype plugin indent on
 " <StartPreferences>
 syntax enable
 set background=dark
-colorscheme blackboard
+colorscheme nord
 
 " Ignore folders
 set wildignore+=*/.git/*,*/node_modules/*
