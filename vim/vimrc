@@ -18,6 +18,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 filetype plugin indent on
 " <EndVundle>
@@ -61,6 +63,16 @@ set ttymouse=xterm2
 nnoremap <leader>l :set list!<CR>
 " Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
+
+" Easy Motion: s(Search 2 chars) & m(move to word)
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+
+map s <Plug>(easymotion-s2)
+nmap s <Plug>(easymotion-overwin-f2)
+map m <Plug>(easymotion-bd-w)
+nmap m <Plug>(easymotion-overwin-w)
+
 " Turn off current search highlight
 nnoremap <silent> <Space> :nohlsearch<BAR>:echo<CR>
 " Move around windows using Meta-VimDirection
